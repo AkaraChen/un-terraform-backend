@@ -1,6 +1,6 @@
 # un-terraform-backend
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FAkaraChen%2Fun-terraform-backend&env=UPSTASH_REDIS_REST_URL,UPSTASH_REDIS_REST_TOKEN&project-name=unterraform&repository-name=unterraform) [![Deploy to DO](https://www.deploytodo.com/do-btn-blue.svg)](https://cloud.digitalocean.com/apps/new?repo=https://github.com/akarachen/un-terraform-backend/tree/main) [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/akarachen/un-terraform-backend#NITRO_PRESET=netlify&NITRO_COMPATIBILITY_DATE=2025-02-03&TF_HTTP_ADDRESS=http://localhost&TF_HTTP_UPDATE_METHOD=POST&TF_HTTP_LOCK_ADDRESS=http://localhost/lock&TF_HTTP_LOCK_METHOD=POST&TF_HTTP_UNLOCK_ADDRESS=http://localhost/unlock&TF_HTTP_UNLOCK_METHOD=POST&UPSTASH_REDIS_REST_URL=&UPSTASH_REDIS_REST_TOKEN=)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FAkaraChen%2Fun-terraform-backend&env=UPSTASH_REDIS_REST_URL,UPSTASH_REDIS_REST_TOKEN&project-name=unterraform&repository-name=unterraform) [![Deploy to DO](https://www.deploytodo.com/do-btn-blue.svg)](https://cloud.digitalocean.com/apps/new?repo=https://github.com/akarachen/un-terraform-backend/tree/main) [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/akarachen/un-terraform-backend#NITRO_PRESET=netlify&NITRO_COMPATIBILITY_DATE=2025-02-03&TF_HTTP_ADDRESS=http://localhost&TF_HTTP_UPDATE_METHOD=POST&TF_HTTP_LOCK_ADDRESS=http://localhost/lock&TF_HTTP_LOCK_METHOD=POST&TF_HTTP_UNLOCK_ADDRESS=http://localhost/unlock&TF_HTTP_UNLOCK_METHOD=POST&UPSTASH_REDIS_REST_URL=&UPSTASH_REDIS_REST_TOKEN=&DRIVER=upstash)
 
 Run terraform backend any where, with minimium code modification (mostly no need to modify).
 
@@ -19,6 +19,7 @@ Run terraform backend any where, with minimium code modification (mostly no need
 - Deno
 - Netlify Functions
 - Digital Ocean
+- Vercel functions
 - More to come
 
 ### object storage
