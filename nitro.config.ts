@@ -4,6 +4,7 @@ import { config } from './config/config'
 export default defineNitroConfig({
     srcDir: 'server',
     preset: config.NITRO_PRESET,
+    noExternals: false,
     compatibilityDate: config.NITRO_COMPATIBILITY_DATE as any,
     rollupConfig: {
         onwarn(warning) {

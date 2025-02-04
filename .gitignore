@@ -152,3 +152,6 @@ dist
 
 # local dev file
 data
+
+# scripts build
+scripts/dist
