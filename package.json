@@ -10,6 +10,7 @@
         "install-deps": "node scripts/dist/scripts/deps.js"
     },
     "devDependencies": {
+        "@netlify/blobs": "^8.1.0",
         "@types/node": "^22.13.1",
         "dotenv": "^16.4.7",
         "h3": "^1.14.0",
