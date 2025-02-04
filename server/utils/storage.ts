@@ -32,25 +32,12 @@ const getDriver = async () => {
                 accountName: config.DRIVER_AZURE_STORAGE_BLOB_ACCOUNT_NAME,
             })
         }
-        case 'cloudflare-kv-binding': {
-            const kv = await import('unstorage/drivers/cloudflare-kv-binding')
-            return kv.default({
-                binding: config.DRIVER_CLOUDFLARE_KV_BINDING_NAME,
-                base: config.DRIVER_CLOUDFLARE_KV_BINDING_PREFIX,
-            })
-        }
         case 'cloudflare-kv-http': {
             const kv = await import('unstorage/drivers/cloudflare-kv-http')
             return kv.default({
                 accountId: config.DRIVER_CLOUDFLARE_ACCOUNT_ID,
                 namespaceId: config.DRIVER_CLOUDFLARE_KV_NAMESPACE_ID,
                 apiToken: config.DRIVER_CLOUDFLARE_API_TOKEN,
-            })
-        }
-        case 'cloudflare-r2-binding': {
-            const r2 = await import('unstorage/drivers/cloudflare-r2-binding')
-            return r2.default({
-                binding: config.DRIVER_CLOUDFLARE_R2_BINDING_NAME,
             })
         }
         case 'deno-kv': {

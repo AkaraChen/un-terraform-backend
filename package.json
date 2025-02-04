@@ -34,5 +34,8 @@
         "patchedDependencies": {
             "unstorage": "patches/unstorage.patch"
         }
+    },
+    "engines": {
+        "node": "22.x"
     }
 }

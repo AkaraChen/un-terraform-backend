@@ -31,19 +31,10 @@ const driverUnionSchema = z.discriminatedUnion('DRIVER', [
         DRIVER_AZURE_STORAGE_BLOB_ACCOUNT_NAME: z.string(),
     }),
     z.object({
-        DRIVER: z.literal('cloudflare-kv-binding'),
-        DRIVER_CLOUDFLARE_KV_BINDING_NAME: z.string(),
-        DRIVER_CLOUDFLARE_KV_BINDING_PREFIX: z.string(),
-    }),
-    z.object({
         DRIVER: z.literal('cloudflare-kv-http'),
         DRIVER_CLOUDFLARE_API_TOKEN: z.string(),
         DRIVER_CLOUDFLARE_ACCOUNT_ID: z.string(),
         DRIVER_CLOUDFLARE_KV_NAMESPACE_ID: z.string(),
-    }),
-    z.object({
-        DRIVER: z.literal('cloudflare-r2-binding'),
-        DRIVER_CLOUDFLARE_R2_BINDING_NAME: z.string(),
     }),
     z.object({
         DRIVER: z.literal('deno-kv'),

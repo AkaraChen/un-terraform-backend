@@ -1,7 +1,5 @@
 # un-terraform-backend
 
-[简体中文](README-cn.md)
-
 Run terraform backend any where, with minimium code modification (mostly no need to modify).
 
 ## Features
@@ -12,15 +10,13 @@ Run terraform backend any where, with minimium code modification (mostly no need
 
 ## Supported platform
 
-### js runtime
+### Environment
 
 - Node.js
 - Bun
 - Deno
-- Cloudflare Worker
-- Vercel Edge Function
-
-See all supported platform at [Nitro Docs](https://nitro.build/deploy).
+- Netlify Functions
+- Digital Ocean
 
 ### object storage
 
@@ -56,4 +52,27 @@ And run:
 docker compose up
 ```
 
-### Cloudflare Workers + Upstash
+### Netlify + Upstash
+
+```bash
+NITRO_PRESET=netlify
+NITRO_COMPATIBILITY_DATE=2025-02-03
+TF_HTTP_ADDRESS=https://<yourhost>:3000
+TF_HTTP_UPDATE_METHOD=POST
+TF_HTTP_LOCK_ADDRESS=https://<yourhost>/lock
+TF_HTTP_LOCK_METHOD=POST
+TF_HTTP_UNLOCK_ADDRESS=https://<yourhost>/unlock
+TF_HTTP_UNLOCK_METHOD=POST
+TF_HTTP_USERNAME=username
+TF_HTTP_PASSWORD=password
+DRIVER=upstash
+UPSTASH_REDIS_REST_URL=<yoururl>
+UPSTASH_REDIS_REST_TOKEN=<yourtoken>
+```
+
+And run:
+
+```shell
+pnpm build
+netlify functions:serve dist
+```
