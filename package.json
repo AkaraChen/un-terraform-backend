@@ -5,9 +5,7 @@
         "dev": "nitro dev",
         "prepare": "nitro prepare",
         "preview": "node .output/server/index.mjs",
-        "format": "prettier --write .",
-        "build:scripts": "pnpm tsc -p ./tsconfig.scripts.json",
-        "install-deps": "node scripts/dist/scripts/deps.js"
+        "format": "prettier --write ."
     },
     "devDependencies": {
         "@netlify/blobs": "^8.1.0",
