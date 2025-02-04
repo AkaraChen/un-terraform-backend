@@ -29,7 +29,7 @@ const definations: Partial<Record<Config['DRIVER'], Dep[]>> = {
     ],
     'azure-storage-blob': [
         {
-            name: 'azure-storage-blob',
+            name: '@azure/storage-blob',
             version: '12.26.0',
         },
         {
