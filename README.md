@@ -17,6 +17,7 @@ Run terraform backend any where, with minimium code modification (mostly no need
 - Deno
 - Netlify Functions
 - Digital Ocean
+- More to come
 
 ### object storage
 
@@ -24,6 +25,7 @@ Run terraform backend any where, with minimium code modification (mostly no need
 - Netlify Blobs
 - Redis
 - Vercel KV/Blob
+- More to come
 
 ## Installation
 
