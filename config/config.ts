@@ -67,14 +67,6 @@ const driverUnionSchema = z.discriminatedUnion('DRIVER', [
         DRIVER_REDIS_PASSWORD: z.string(),
     }),
     z.object({
-        DRIVER: z.literal('s3'),
-        DRIVER_S3_BUCKET: z.string(),
-        DRIVER_S3_ENDPOINT: z.string(),
-        DRIVER_S3_ACCESS_KEY_ID: z.string(),
-        DRIVER_S3_SECRET_ACCESS_KEY: z.string(),
-        DRIVER_S3_REGION: z.string(),
-    }),
-    z.object({
         DRIVER: z.literal('uploadthing'),
         UPLOADTHING_SECRET: z.string(),
     }),

@@ -25,7 +25,6 @@
 - Cloudflare KV/R2
 - Netlify Blobs
 - Redis
-- S3
 - Vercel KV/Blob
 
 ## 安装

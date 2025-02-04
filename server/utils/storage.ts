@@ -77,16 +77,6 @@ const getDriver = async () => {
                 password: config.DRIVER_REDIS_PASSWORD,
             })
         }
-        case 's3': {
-            const s3 = await import('unstorage/drivers/s3')
-            return s3.default({
-                accessKeyId: config.DRIVER_S3_ACCESS_KEY_ID,
-                secretAccessKey: config.DRIVER_S3_SECRET_ACCESS_KEY,
-                endpoint: config.DRIVER_S3_ENDPOINT,
-                bucket: config.DRIVER_S3_BUCKET,
-                region: config.DRIVER_S3_REGION,
-            })
-        }
         case 'uploadthing': {
             const uploadthing = await import('unstorage/drivers/uploadthing')
             return uploadthing.default({})

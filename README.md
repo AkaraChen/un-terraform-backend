@@ -27,7 +27,6 @@ See all supported platform at [Nitro Docs](https://nitro.build/deploy).
 - Cloudflare KV/R2
 - Netlify Blobs
 - Redis
-- S3
 - Vercel KV/Blob
 
 ## Installation

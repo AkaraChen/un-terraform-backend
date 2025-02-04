@@ -43,12 +43,6 @@ const definations: Partial<Record<Config['DRIVER'], Dep[]>> = {
             version: '5.4.2',
         },
     ],
-    s3: [
-        {
-            name: 'aws4fetch',
-            version: '1.0.20',
-        },
-    ],
     uploadthing: [
         {
             name: 'uploadthing',
