@@ -158,3 +158,6 @@ scripts/dist
 
 # cf
 .wrangler
+
+# vercel
+.vercel
