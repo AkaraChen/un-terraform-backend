@@ -18,6 +18,7 @@ export const nitroPresetSchema = z.enum([
     'node-cluster',
     'node-listener',
     'node-server',
+    'vercel',
 ])
 
 export const HttpMethodSchema = z.enum([

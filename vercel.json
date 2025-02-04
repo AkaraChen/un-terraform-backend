@@ -1,0 +1,24 @@
+{
+    "$schema": "https://openapi.vercel.sh/vercel.json",
+    "env": {
+        "DRIVER": "upstash",
+        "TF_HTTP_ADDRESS": "https://localhost",
+        "TF_HTTP_UPDATE_METHOD": "POST",
+        "TF_HTTP_LOCK_ADDRESS": "https://localhost",
+        "TF_HTTP_LOCK_METHOD": "POST",
+        "TF_HTTP_UNLOCK_ADDRESS": "https://localhost",
+        "TF_HTTP_UNLOCK_METHOD": "POST"
+    },
+    "build": {
+        "env": {
+            "NITRO_PRESET": "vercel",
+            "NITRO_COMPATIBILITY_DATE": "2025-02-03",
+            "TF_HTTP_ADDRESS": "https://localhost",
+            "TF_HTTP_UPDATE_METHOD": "POST",
+            "TF_HTTP_LOCK_ADDRESS": "https://localhost",
+            "TF_HTTP_LOCK_METHOD": "POST",
+            "TF_HTTP_UNLOCK_ADDRESS": "https://localhost",
+            "TF_HTTP_UNLOCK_METHOD": "POST"
+        }
+    }
+}

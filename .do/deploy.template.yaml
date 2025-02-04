@@ -1,0 +1,28 @@
+spec:
+    name: unterraform
+    services:
+        - name: unterraform
+          git:
+            branch: main
+            repo_clone_url: https://github.com/AkaraChen/un-terraform-backend
+          envs:
+          - key: UPSTASH_REDIS_REST_URL
+            type: SECRET
+          - key: UPSTASH_REDIS_REST_TOKEN
+            type: SECRET
+          - key: TF_HTTP_ADDRESS
+            value: https://localhost
+          - key: TF_HTTP_UPDATE_METHOD
+            value: POST
+          - key: TF_HTTP_LOCK_ADDRESS
+            value: https://localhost
+          - key: TF_HTTP_LOCK_METHOD
+            value: POST
+          - key: TF_HTTP_UNLOCK_ADDRESS
+            value: https://localhost
+          - key: TF_HTTP_UNLOCK_METHOD
+            value: POST
+          - key: NITRO_PRESET
+            value: node
+          - key: NITRO_COMPATIBILITY_DATE
+            value: '2025-02-03'
