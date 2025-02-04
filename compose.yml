@@ -1,0 +1,8 @@
+services:
+    unterraform:
+        build: .
+        container_name: unterraform
+        ports:
+            - 3000:3000
+        volumes:
+            - ./data:/var/unterraform

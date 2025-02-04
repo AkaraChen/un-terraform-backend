@@ -1,0 +1,3 @@
+services:
+    unterraform:
+        command: ['sleep', 'infinity']

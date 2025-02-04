@@ -1,0 +1,23 @@
+diff --git a/drivers/deno-kv.cjs b/drivers/deno-kv.cjs
+index 59e8203501c99d1901a3b190883bf0523d05aa71..b4f20a7adbcfe07610af5dacbb57b37af5034ca4 100644
+--- a/drivers/deno-kv.cjs
++++ b/drivers/deno-kv.cjs
+@@ -4,7 +4,7 @@ Object.defineProperty(exports, "__esModule", {
+   value: true
+ });
+ 
+-var _utils = require("../utils");
++var _utils = require("./utils");
+ var _index = require("./utils/index.cjs");
+ const DRIVER_NAME = "deno-kv";
+ module.exports = (0, _index.defineDriver)((opts = {}) => {
+diff --git a/drivers/deno-kv.mjs b/drivers/deno-kv.mjs
+index 01e8602b5065e26c0714b43047e363fd681ecc5c..62dc71216614cb516313479e3c3fdb42b54b279d 100644
+--- a/drivers/deno-kv.mjs
++++ b/drivers/deno-kv.mjs
+@@ -1,4 +1,4 @@
+-import { normalizeKey } from "../utils";
++import { normalizeKey } from "./utils";
+ import { defineDriver, createError } from "./utils/index.mjs";
+ const DRIVER_NAME = "deno-kv";
+ export default defineDriver(
