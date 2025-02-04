@@ -13,9 +13,36 @@ importers:
 
   .:
     dependencies:
+      '@azure/app-configuration':
+        specifier: ^1.8.0
+        version: 1.8.0
+      '@azure/identity':
+        specifier: ^4.6.0
+        version: 4.6.0
+      '@azure/keyvault-secrets':
+        specifier: ^4.9.0
+        version: 4.9.0
+      '@azure/storage-blob':
+        specifier: ^12.26.0
+        version: 12.26.0
+      '@deno/kv':
+        specifier: ^0.9.0
+        version: 0.9.0
+      '@upstash/redis':
+        specifier: ^1.34.3
+        version: 1.34.3
+      '@vercel/kv':
+        specifier: ^3.0.0
+        version: 3.0.0
+      ioredis:
+        specifier: ^5.4.2
+        version: 5.4.2
       unstorage:
         specifier: ^1.14.4
-        version: 1.14.4(patch_hash=glpgqo6eylpguyiin4odaysnbu)(@azure/app-configuration@1.8.0)(@azure/identity@4.6.0)(@azure/keyvault-secrets@4.9.0)(@azure/storage-blob@12.26.0)(@deno/kv@0.9.0)(@upstash/redis@1.34.3)(aws4fetch@1.0.20)(db0@0.2.3)(ioredis@5.4.2)(uploadthing@7.4.4(h3@1.14.0))
+        version: 1.14.4(patch_hash=glpgqo6eylpguyiin4odaysnbu)(@azure/app-configuration@1.8.0)(@azure/identity@4.6.0)(@azure/keyvault-secrets@4.9.0)(@azure/storage-blob@12.26.0)(@deno/kv@0.9.0)(@upstash/redis@1.34.3)(@vercel/kv@3.0.0)(aws4fetch@1.0.20)(db0@0.2.3)(ioredis@5.4.2)(uploadthing@7.4.4(h3@1.14.0))
+      uploadthing:
+        specifier: ^7.4.4
+        version: 7.4.4(h3@1.14.0)
     devDependencies:
       '@types/node':
         specifier: ^22.13.1
@@ -28,7 +55,7 @@ importers:
         version: 1.14.0
       nitropack:
         specifier: latest
-        version: 2.10.4(@azure/app-configuration@1.8.0)(@azure/identity@4.6.0)(@azure/keyvault-secrets@4.9.0)(@azure/storage-blob@12.26.0)(@deno/kv@0.9.0)(@upstash/redis@1.34.3)(aws4fetch@1.0.20)(typescript@5.7.3)(uploadthing@7.4.4(h3@1.14.0))
+        version: 2.10.4(@azure/app-configuration@1.8.0)(@azure/identity@4.6.0)(@azure/keyvault-secrets@4.9.0)(@azure/storage-blob@12.26.0)(@deno/kv@0.9.0)(@upstash/redis@1.34.3)(@vercel/kv@3.0.0)(aws4fetch@1.0.20)(typescript@5.7.3)(uploadthing@7.4.4(h3@1.14.0))
       prettier:
         specifier: 3.4.2
         version: 3.4.2
@@ -735,6 +762,10 @@ packages:
 
   '@upstash/redis@1.34.3':
     resolution: {integrity: sha512-VT25TyODGy/8ljl7GADnJoMmtmJ1F8d84UXfGonRRF8fWYJz7+2J6GzW+a6ETGtk4OyuRTt7FRSvFG5GvrfSdQ==}
+
+  '@vercel/kv@3.0.0':
+    resolution: {integrity: sha512-pKT8fRnfyYk2MgvyB6fn6ipJPCdfZwiKDdw7vB+HL50rjboEBHDVBEcnwfkEpVSp2AjNtoaOUH7zG+bVC/rvSg==}
+    engines: {node: '>=14.6'}
 
   '@vercel/nft@0.27.10':
     resolution: {integrity: sha512-zbaF9Wp/NsZtKLE4uVmL3FyfFwlpDyuymQM1kPbeT0mVOHKDQQNjnnfslB3REg3oZprmNFJuh3pkHBk2qAaizg==}
@@ -2196,7 +2227,6 @@ snapshots:
   '@azure/abort-controller@2.1.2':
     dependencies:
       tslib: 2.8.1
-    optional: true
 
   '@azure/app-configuration@1.8.0':
     dependencies:
@@ -2213,14 +2243,12 @@ snapshots:
       tslib: 2.8.1
     transitivePeerDependencies:
       - supports-color
-    optional: true
 
   '@azure/core-auth@1.9.0':
     dependencies:
       '@azure/abort-controller': 2.1.2
       '@azure/core-util': 1.11.0
       tslib: 2.8.1
-    optional: true
 
   '@azure/core-client@1.9.2':
     dependencies:
@@ -2233,7 +2261,6 @@ snapshots:
       tslib: 2.8.1
     transitivePeerDependencies:
       - supports-color
-    optional: true
 
   '@azure/core-http-compat@2.1.2':
     dependencies:
@@ -2242,7 +2269,6 @@ snapshots:
       '@azure/core-rest-pipeline': 1.18.2
     transitivePeerDependencies:
       - supports-color
-    optional: true
 
   '@azure/core-lro@2.7.2':
     dependencies:
@@ -2250,12 +2276,10 @@ snapshots:
       '@azure/core-util': 1.11.0
       '@azure/logger': 1.1.4
       tslib: 2.8.1
-    optional: true
 
   '@azure/core-paging@1.6.2':
     dependencies:
       tslib: 2.8.1
-    optional: true
 
   '@azure/core-rest-pipeline@1.18.2':
     dependencies:
@@ -2269,24 +2293,20 @@ snapshots:
       tslib: 2.8.1
     transitivePeerDependencies:
       - supports-color
-    optional: true
 
   '@azure/core-tracing@1.2.0':
     dependencies:
       tslib: 2.8.1
-    optional: true
 
   '@azure/core-util@1.11.0':
     dependencies:
       '@azure/abort-controller': 2.1.2
       tslib: 2.8.1
-    optional: true
 
   '@azure/core-xml@1.4.4':
     dependencies:
       fast-xml-parser: 4.5.1
       tslib: 2.8.1
-    optional: true
 
   '@azure/identity@4.6.0':
     dependencies:
@@ -2306,7 +2326,6 @@ snapshots:
       tslib: 2.8.1
     transitivePeerDependencies:
       - supports-color
-    optional: true
 
   '@azure/keyvault-common@2.0.0':
     dependencies:
@@ -2320,7 +2339,6 @@ snapshots:
       tslib: 2.8.1
     transitivePeerDependencies:
       - supports-color
-    optional: true
 
   '@azure/keyvault-secrets@4.9.0':
     dependencies:
@@ -2338,30 +2356,24 @@ snapshots:
       tslib: 2.8.1
     transitivePeerDependencies:
       - supports-color
-    optional: true
 
   '@azure/logger@1.1.4':
     dependencies:
       tslib: 2.8.1
-    optional: true
 
   '@azure/msal-browser@4.1.0':
     dependencies:
       '@azure/msal-common': 15.1.0
-    optional: true
 
-  '@azure/msal-common@14.16.0':
-    optional: true
+  '@azure/msal-common@14.16.0': {}
 
-  '@azure/msal-common@15.1.0':
-    optional: true
+  '@azure/msal-common@15.1.0': {}
 
   '@azure/msal-node@2.16.2':
     dependencies:
       '@azure/msal-common': 14.16.0
       jsonwebtoken: 9.0.2
       uuid: 8.3.2
-    optional: true
 
   '@azure/storage-blob@12.26.0':
     dependencies:
@@ -2380,7 +2392,6 @@ snapshots:
       tslib: 2.8.1
     transitivePeerDependencies:
       - supports-color
-    optional: true
 
   '@babel/code-frame@7.26.2':
     dependencies:
@@ -2504,14 +2515,12 @@ snapshots:
       '@deno/kv-darwin-x64': 0.9.0
       '@deno/kv-linux-x64-gnu': 0.9.0
       '@deno/kv-win32-x64-msvc': 0.9.0
-    optional: true
 
   '@effect/platform@0.70.7(effect@3.11.5)':
     dependencies:
       effect: 3.11.5
       find-my-way-ts: 0.1.5
       multipasta: 0.2.5
-    optional: true
 
   '@esbuild/aix-ppc64@0.24.2':
     optional: true
@@ -2874,8 +2883,7 @@ snapshots:
 
   '@sindresorhus/merge-streams@2.3.0': {}
 
-  '@standard-schema/spec@1.0.0-beta.3':
-    optional: true
+  '@standard-schema/spec@1.0.0-beta.3': {}
 
   '@types/estree@1.0.6': {}
 
@@ -2889,20 +2897,21 @@ snapshots:
 
   '@types/resolve@1.20.2': {}
 
-  '@uploadthing/mime-types@0.3.4':
-    optional: true
+  '@uploadthing/mime-types@0.3.4': {}
 
   '@uploadthing/shared@7.1.5':
     dependencies:
       '@uploadthing/mime-types': 0.3.4
       effect: 3.11.5
       sqids: 0.3.0
-    optional: true
 
   '@upstash/redis@1.34.3':
     dependencies:
       crypto-js: 4.2.0
-    optional: true
+
+  '@vercel/kv@3.0.0':
+    dependencies:
+      '@upstash/redis': 1.34.3
 
   '@vercel/nft@0.27.10(rollup@4.34.1)':
     dependencies:
@@ -3020,8 +3029,7 @@ snapshots:
 
   buffer-crc32@1.0.0: {}
 
-  buffer-equal-constant-time@1.0.1:
-    optional: true
+  buffer-equal-constant-time@1.0.1: {}
 
   buffer-from@1.1.2: {}
 
@@ -3142,8 +3150,7 @@ snapshots:
     dependencies:
       uncrypto: 0.1.3
 
-  crypto-js@4.2.0:
-    optional: true
+  crypto-js@4.2.0: {}
 
   db0@0.2.3: {}
 
@@ -3188,14 +3195,12 @@ snapshots:
   ecdsa-sig-formatter@1.0.11:
     dependencies:
       safe-buffer: 5.2.1
-    optional: true
 
   ee-first@1.1.1: {}
 
   effect@3.11.5:
     dependencies:
       fast-check: 3.23.2
-    optional: true
 
   electron-to-chromium@1.5.90: {}
 
@@ -3268,7 +3273,6 @@ snapshots:
   fast-check@3.23.2:
     dependencies:
       pure-rand: 6.1.0
-    optional: true
 
   fast-deep-equal@3.1.3: {}
 
@@ -3285,7 +3289,6 @@ snapshots:
   fast-xml-parser@4.5.1:
     dependencies:
       strnum: 1.0.5
-    optional: true
 
   fastq@1.19.0:
     dependencies:
@@ -3301,8 +3304,7 @@ snapshots:
     dependencies:
       to-regex-range: 5.0.1
 
-  find-my-way-ts@0.1.5:
-    optional: true
+  find-my-way-ts@0.1.5: {}
 
   foreground-child@3.3.0:
     dependencies:
@@ -3419,7 +3421,6 @@ snapshots:
       debug: 4.4.0(supports-color@9.4.0)
     transitivePeerDependencies:
       - supports-color
-    optional: true
 
   http-shutdown@1.2.2: {}
 
@@ -3557,33 +3558,28 @@ snapshots:
       lodash.once: 4.1.1
       ms: 2.1.3
       semver: 7.7.0
-    optional: true
 
   jwa@1.4.1:
     dependencies:
       buffer-equal-constant-time: 1.0.1
       ecdsa-sig-formatter: 1.0.11
       safe-buffer: 5.2.1
-    optional: true
 
   jwa@2.0.0:
     dependencies:
       buffer-equal-constant-time: 1.0.1
       ecdsa-sig-formatter: 1.0.11
       safe-buffer: 5.2.1
-    optional: true
 
   jws@3.2.2:
     dependencies:
       jwa: 1.4.1
       safe-buffer: 5.2.1
-    optional: true
 
   jws@4.0.0:
     dependencies:
       jwa: 2.0.0
       safe-buffer: 5.2.1
-    optional: true
 
   klona@2.0.6: {}
 
@@ -3621,28 +3617,21 @@ snapshots:
 
   lodash.defaults@4.2.0: {}
 
-  lodash.includes@4.3.0:
-    optional: true
+  lodash.includes@4.3.0: {}
 
   lodash.isarguments@3.1.0: {}
 
-  lodash.isboolean@3.0.3:
-    optional: true
+  lodash.isboolean@3.0.3: {}
 
-  lodash.isinteger@4.0.4:
-    optional: true
+  lodash.isinteger@4.0.4: {}
 
-  lodash.isnumber@3.0.3:
-    optional: true
+  lodash.isnumber@3.0.3: {}
 
-  lodash.isplainobject@4.0.6:
-    optional: true
+  lodash.isplainobject@4.0.6: {}
 
-  lodash.isstring@4.0.1:
-    optional: true
+  lodash.isstring@4.0.1: {}
 
-  lodash.once@4.1.1:
-    optional: true
+  lodash.once@4.1.1: {}
 
   lodash@4.17.21: {}
 
@@ -3724,10 +3713,9 @@ snapshots:
 
   ms@2.1.3: {}
 
-  multipasta@0.2.5:
-    optional: true
+  multipasta@0.2.5: {}
 
-  nitropack@2.10.4(@azure/app-configuration@1.8.0)(@azure/identity@4.6.0)(@azure/keyvault-secrets@4.9.0)(@azure/storage-blob@12.26.0)(@deno/kv@0.9.0)(@upstash/redis@1.34.3)(aws4fetch@1.0.20)(typescript@5.7.3)(uploadthing@7.4.4(h3@1.14.0)):
+  nitropack@2.10.4(@azure/app-configuration@1.8.0)(@azure/identity@4.6.0)(@azure/keyvault-secrets@4.9.0)(@azure/storage-blob@12.26.0)(@deno/kv@0.9.0)(@upstash/redis@1.34.3)(@vercel/kv@3.0.0)(aws4fetch@1.0.20)(typescript@5.7.3)(uploadthing@7.4.4(h3@1.14.0)):
     dependencies:
       '@cloudflare/kv-asset-handler': 0.3.4
       '@netlify/functions': 2.8.2
@@ -3794,7 +3782,7 @@ snapshots:
       unctx: 2.4.1
       unenv: 1.10.0
       unimport: 3.14.6(rollup@4.34.1)
-      unstorage: 1.14.4(patch_hash=glpgqo6eylpguyiin4odaysnbu)(@azure/app-configuration@1.8.0)(@azure/identity@4.6.0)(@azure/keyvault-secrets@4.9.0)(@azure/storage-blob@12.26.0)(@deno/kv@0.9.0)(@upstash/redis@1.34.3)(aws4fetch@1.0.20)(db0@0.2.3)(ioredis@5.4.2)(uploadthing@7.4.4(h3@1.14.0))
+      unstorage: 1.14.4(patch_hash=glpgqo6eylpguyiin4odaysnbu)(@azure/app-configuration@1.8.0)(@azure/identity@4.6.0)(@azure/keyvault-secrets@4.9.0)(@azure/storage-blob@12.26.0)(@deno/kv@0.9.0)(@upstash/redis@1.34.3)(@vercel/kv@3.0.0)(aws4fetch@1.0.20)(db0@0.2.3)(ioredis@5.4.2)(uploadthing@7.4.4(h3@1.14.0))
       untyped: 1.5.2
       unwasm: 0.3.9
     transitivePeerDependencies:
@@ -3947,8 +3935,7 @@ snapshots:
 
   process@0.11.10: {}
 
-  pure-rand@6.1.0:
-    optional: true
+  pure-rand@6.1.0: {}
 
   queue-microtask@1.2.3: {}
 
@@ -4125,8 +4112,7 @@ snapshots:
 
   source-map@0.7.4: {}
 
-  sqids@0.3.0:
-    optional: true
+  sqids@0.3.0: {}
 
   standard-as-callback@2.1.0: {}
 
@@ -4134,8 +4120,7 @@ snapshots:
 
   std-env@3.8.0: {}
 
-  stoppable@1.1.0:
-    optional: true
+  stoppable@1.1.0: {}
 
   streamx@2.22.0:
     dependencies:
@@ -4178,8 +4163,7 @@ snapshots:
     dependencies:
       js-tokens: 9.0.1
 
-  strnum@1.0.5:
-    optional: true
+  strnum@1.0.5: {}
 
   supports-color@9.4.0: {}
 
@@ -4232,8 +4216,7 @@ snapshots:
 
   tr46@0.0.3: {}
 
-  tslib@2.8.1:
-    optional: true
+  tslib@2.8.1: {}
 
   type-fest@4.33.0: {}
 
@@ -4293,7 +4276,7 @@ snapshots:
       acorn: 8.14.0
       webpack-virtual-modules: 0.6.2
 
-  unstorage@1.14.4(patch_hash=glpgqo6eylpguyiin4odaysnbu)(@azure/app-configuration@1.8.0)(@azure/identity@4.6.0)(@azure/keyvault-secrets@4.9.0)(@azure/storage-blob@12.26.0)(@deno/kv@0.9.0)(@upstash/redis@1.34.3)(aws4fetch@1.0.20)(db0@0.2.3)(ioredis@5.4.2)(uploadthing@7.4.4(h3@1.14.0)):
+  unstorage@1.14.4(patch_hash=glpgqo6eylpguyiin4odaysnbu)(@azure/app-configuration@1.8.0)(@azure/identity@4.6.0)(@azure/keyvault-secrets@4.9.0)(@azure/storage-blob@12.26.0)(@deno/kv@0.9.0)(@upstash/redis@1.34.3)(@vercel/kv@3.0.0)(aws4fetch@1.0.20)(db0@0.2.3)(ioredis@5.4.2)(uploadthing@7.4.4(h3@1.14.0)):
     dependencies:
       anymatch: 3.1.3
       chokidar: 3.6.0
@@ -4310,6 +4293,7 @@ snapshots:
       '@azure/storage-blob': 12.26.0
       '@deno/kv': 0.9.0
       '@upstash/redis': 1.34.3
+      '@vercel/kv': 3.0.0
       aws4fetch: 1.0.20
       db0: 0.2.3
       ioredis: 5.4.2
@@ -4358,7 +4342,6 @@ snapshots:
       effect: 3.11.5
     optionalDependencies:
       h3: 1.14.0
-    optional: true
 
   uqr@0.1.2: {}
 
@@ -4368,8 +4351,7 @@ snapshots:
 
   util-deprecate@1.0.2: {}
 
-  uuid@8.3.2:
-    optional: true
+  uuid@8.3.2: {}
 
   webidl-conversions@3.0.1: {}
 
